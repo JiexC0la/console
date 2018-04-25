@@ -90,7 +90,7 @@ Array.filter(function (ele, index, arr) {}, thisVal)
 */
 var a = [1, 2, 3, 4];
 var b = [5, 6];
-var result = a.every(function (num, index, arr) {
+var result = a.filter(function (num, index, arr) {
 	console.log(this); /*this指向传递的对象b，若不传参数b，则this指向window*/
 	return num < 3; /*返回结果result=[1, 2]*/
 }, b);
@@ -188,3 +188,68 @@ var b = a.valueOf();
 
 /*数组去重*/
 var arr = [1, 2, 3, 3, 1, 4];
+
+function getRepeatArrOne(arr) {
+	// 定义一个新数组，第一位肯定不重复
+	var newArr = [arr[0]];
+	for (var i = 1; i < arr.length; i++) {
+		var isRepeat = false;
+		// 遍历新数组，如果新数组里存在，isRepeat为true
+		for (var j = 0; j < newArr.length; j++) {
+			if (arr[i] === newArr[j]) {
+				// 重复跳出循环
+				isRepeat = true;
+				break;
+			}
+		}
+		if (!isRepeat) {
+			newArr.push(arr[i]);
+		}
+	}
+	return newArr;/*newArr = [1, 2, 3, 4]*/
+}
+
+function getRepeatArrTwo(arr) {
+	var newArr = [];
+	for (var i = 0; i < arr.length; i++) {
+		for (var j = i + 1; j < arr.length; j++) {
+			// 如果第i个元素和后面的元素重复，跳过当前值
+			if (arr[i] === arr[j]) {
+				++i; /*i++: 先赋值再自加  ++i: 先自加再赋值*/
+			}
+		}
+		newArr.push(arr[i]);
+	}
+	return newArr;
+}
+
+/*推荐方法*/
+arr.filter(function(ele, index, self) {
+	// 返回当前正向索引和反向索引值相等的元素
+	return index === self.lastIndexOf(ele);
+});
+
+######################################################################################
+/*
+* 比较两个数组是否相等
+*/
+var arr1 = [1, 2, 3];
+var arr2 = ['1', 2, 3];
+
+function compareEqual(arr1, arr2) {
+	if (arr1.length !== arr2.length) {
+		// 数组长度不等
+		return false;
+	}
+	var isEqual = true;
+	// 长度相等，对数组进行排序
+	var newArr1 = arr1.sort();
+	var newArr2 = arr2.sort();
+	for (var i = 0; i < newArr1.length; i++) {
+		if (newArr1[i] !== newArr2[i]) {
+			isEqual = false;
+			break;
+		}
+	}
+	return isEqual;
+}
