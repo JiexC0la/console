@@ -1,0 +1,11 @@
+.main {
+	width: 500px;
+	height: 20%;
+	min-height: 300px;
+	margin: 100px auto;
+	border: 1px solid red;
+	position: relative;
+}
+.main_title {
+	text-align: center;
+}
