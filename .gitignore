@@ -1,0 +1,9 @@
+# .gitignore文件的创建
+# 新建一个文件 touch .gitignore
+# 添加被git忽略的文件
+
+/project/angularDemo/
+
+/project/vueDemo/
+
+/project/cola/node_modules/

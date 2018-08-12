@@ -1,0 +1,10 @@
+{
+	"name": "test_demo",
+	"version": "0.0.1",
+	"author": "cola",
+	"description": "my package.json test",
+	"keywords": ["node.js", "javascript"],
+	"scripts": {
+		"start": "echo I am start!"
+	}
+}
