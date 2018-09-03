@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>COLA</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="src/theme/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="src/theme/common.css">
+    <title>COLA</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="src/theme/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="src/theme/common.css">
 </head>
 <body>
-	<div class="container">
-		<!-- 顶部导航栏 -->
-		<div class="row h50"></div>
-		<!-- 路由界面 -->
-		<div class="container" ui-view></div>
-		<!-- 底部版权栏 -->
-		<div class="row h50"></div>
-	</div>
-	<!-- 使用require加载js -->
-	<script data-main="main.js" src="lib/require.js"></script>
+    <div class="w-100 h-100">
+        <!-- 顶部导航栏 -->
+        <div class="row h50 top0 ps-a w-100">
+        	<div ui-view="topNav"></div>
+        </div>
+        <!-- 路由界面 -->
+        <div class="container" ui-view="main"></div>
+        <!-- 底部版权栏 -->
+        <div class="row h50 bot0 ps-a w-100">
+        	<div ui-view="bottomCopy"></div>
+        </div>
+    </div>
+    <!-- 使用require加载js -->
+    <script data-main="main.js" src="lib/require.js"></script>
 </body>
 </html>

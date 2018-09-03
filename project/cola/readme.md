@@ -1,17 +1,23 @@
+<pre>
 #项目描述
-	记录cloa生活中的点滴
-	angular 1.7.2 + bootstrap 3
+    记录cloa生活中的点滴
+    angular 1.7.2 + bootstrap 3
 
 
---index.html                          主文件
---main.js                             入口文件：引起一些依赖文件和启动angular
---readme.md 						  项目简介
---lib								  存放项目引用的框架文件
---src                                 项目资源
-  |--controllers					  控制器
-  |--directives	                      自定义指定
-  |--fliters                          自定义过滤器
-  |--services                         自定义服务
-  |--route                            路由文件
-  |--views                            视图html
---change.log                          日志文件：记录每次重要功能合入
+--index.html                        主文件
+--main.js                           入口文件：引起一些依赖文件和启动angular
+--readme.md                         项目简介
+--lib                               存放项目引用的框架文件
+--src                               项目资源
+  |--controllers                        控制器
+  |--directives                         自定义指定
+  |--fliters                            自定义过滤器
+  |--services                           自定义服务
+  |--route                              路由文件
+  |--views                              视图html
+  |--i18n                               国际化词条
+  |--theme                              样式文件
+  |--app.js                             项目主模块
+--change.log                        日志文件：记录每次重要功能合入
+--package.json                      依赖的插件配置
+</pre>
