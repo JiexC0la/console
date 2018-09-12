@@ -1,14 +1,6 @@
 /*
-* 排版样式
+* 通用排版样式
 */
-* {
-    margin: 0;
-    padding: 0;
-}
-html, body {
-    height: 100%;
-    width: 100%;
-}
 
 .bot0 {
     bottom: 0px;
@@ -30,6 +22,9 @@ html, body {
 
 .ps-a {
     position: absolute;
+}
+.ps-r {
+    position: relative;
 }
 
 .top0 {

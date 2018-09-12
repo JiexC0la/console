@@ -9,9 +9,9 @@ define(['language'], function(i18n) {
                 autoLogin: false,
                 loginFn: function() {
                     /*
-                     * 表单校验，认证通过后跳转首页
-                     */
-                     $state.go('manage');
+                    * 表单校验，认证通过后跳转首页
+                    */
+                    $state.go('manage');
                 },
                 registerFn: function() {
                     // 注册事件

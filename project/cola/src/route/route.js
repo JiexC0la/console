@@ -28,10 +28,21 @@ define(['app'], function (app) {
                     templateUrl: './src/views/Manage.html'
                 },
                 'leftNav@manage': {
-                    templateUrl: './src/views/LeftNav.html'
+                    templateUrl: './src/views/LeftNav.html',
+                    controller: 'manageCtrl'
                 },
                 'mainContent@manage': {
                     templateUrl: './src/views/MainPhoto.html'
+                }
+            },
+            resolve: {
+                delay: ctrlRegister('manageCtrl', ['./src/controllers/manageCtrl.js'])
+            }
+        }).state('history', {
+            url: '/manage/history',
+            views: {
+                'mainContent@manage': {
+                    templateUrl: './src/views/MainHistory.html'
                 }
             }
         });

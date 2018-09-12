@@ -8,7 +8,11 @@ define([], function () {
         login_password: '密码',
         login_auto: '自动登录',
         login_login: '登录',
-        login_register: '注册'
+        login_register: '注册',
+
+        // 主页面
+        main_photo: '个人相册',
+        main_history: '历史足迹',
     };
     return words;
 });

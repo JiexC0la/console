@@ -1,23 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html ng-controller="mainCtrl">
 <head>
     <title>COLA</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="src/theme/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="src/theme/common.css">
+    <link rel="stylesheet" type="text/css" href="src/theme/style.css">
 </head>
 <body>
     <div class="w-100 h-100">
         <!-- 顶部导航栏 -->
-        <div class="row h50 top0 ps-a w-100">
-        	<div ui-view="topNav"></div>
-        </div>
+        <div ng-include="header.url"></div>
         <!-- 路由界面 -->
-        <div class="container" ui-view="main"></div>
+        <div class="container mainView" ui-view></div>
         <!-- 底部版权栏 -->
-        <div class="row h50 bot0 ps-a w-100">
-        	<div ui-view="bottomCopy"></div>
-        </div>
+        <div ng-include="footer.url"></div>
     </div>
     <!-- 使用require加载js -->
     <script data-main="main.js" src="lib/require.js"></script>

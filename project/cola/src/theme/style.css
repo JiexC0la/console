@@ -1,0 +1,33 @@
+/**
+ * 页面私有样式
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+/*主视图样式*/
+.mainView {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    min-height: calc(100% - 100px);
+}
+.header {
+	position: relative;
+	height: 50px;
+	top: 0px;
+	width: 100%;
+}
+.footer {
+	position: relative;
+	height: 50px;
+	bottom: 0px;
+	width: 100%;
+}
