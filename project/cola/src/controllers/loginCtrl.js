@@ -11,7 +11,7 @@ define(['language'], function(i18n) {
                     /*
                     * 表单校验，认证通过后跳转首页
                     */
-                    $state.go('manage');
+                    $state.go('manage.photo');
                 },
                 registerFn: function() {
                     // 注册事件

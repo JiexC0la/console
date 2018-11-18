@@ -30,7 +30,7 @@ require.config({
     }
 });
 
-require(['app', 'jquery', 'ui.route', 'route'], function (app) {
+require(['app', 'jquery', 'ui.route', 'route', 'bootstrap'], function (app) {
     $(function () {
         angular.bootstrap(document, [app.name]);
     });

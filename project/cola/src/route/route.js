@@ -22,28 +22,25 @@ define(['app'], function (app) {
                 delay: ctrlRegister('loginCtrl', ['./src/controllers/loginCtrl.js'])
             }
         }).state('manage', {
-            url: '/manage/photo',
-            views: {
-                '': {
-                    templateUrl: './src/views/Manage.html'
-                },
-                'leftNav@manage': {
-                    templateUrl: './src/views/LeftNav.html',
-                    controller: 'manageCtrl'
-                },
-                'mainContent@manage': {
-                    templateUrl: './src/views/MainPhoto.html'
-                }
-            },
+            url: '/manage',
+            templateUrl: './src/views/Manage.html',
+            controller: 'manageCtrl',
             resolve: {
                 delay: ctrlRegister('manageCtrl', ['./src/controllers/manageCtrl.js'])
             }
-        }).state('history', {
-            url: '/manage/history',
-            views: {
-                'mainContent@manage': {
-                    templateUrl: './src/views/MainHistory.html'
-                }
+        }).state('manage.photo', {
+            url: '/photo',
+            templateUrl: './src/views/MainPhoto.html',
+            controller: 'photoCtrl',
+            resolve: {
+                delay: ctrlRegister('photoCtrl', ['./src/controllers/photoCtrl.js'])
+            }
+        }).state('manage.history', {
+            url: '/history',
+            templateUrl: './src/views/MainHistory.html',
+            controller: 'historyCtrl',
+            resolve: {
+                delay: ctrlRegister('historyCtrl', ['./src/controllers/historyCtrl.js'])
             }
         });
 

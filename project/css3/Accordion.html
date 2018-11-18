@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css3-手风琴</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.accordionMenu{
+			background: #fff;
+			color: #424242;
+			font: 12px Arial, Verdana, sans-serif;
+			margin: 0 auto;
+			padding: 10px;
+			width: 500px;
+		}
+		.accordionMenu h2{
+			margin: 5px 0;
+			padding: 0;
+			position: relative;
+		}
+		.accordionMenu h2:before{
+			/*制作向下三角箭头*/
+			border: 5px solid #fff;
+			/*指定边框颜色，上边框为白色，其他边框为透明色*/
+			border-color: #fff transparent transparent transparent;
+			content: '';
+			height: 0px;
+			position: absolute;
+			right: 10px;
+			top: 15px;
+			width: 0px;
+		}
+		.accordionMenu h2 a{
+			background: #8f8f8f;
+			/*线性渐变*/
+			background: linear-gradient(top, #cecece, #8f8f8f);
+			background: -webkit-gradient(linear, left top, left bottom, from(#cecece), to(#8f8f8f));
+			background: -webkit-linear-gradient(top, #cecece, #8f8f8f);
+			background: -o-linear-gradient(top, #cecece, #8f8f8f);
+			background: -moz-linear-gradient(top, #cecece, #8f8f8f);
+			display: block;
+			border-radius: 5px;
+			font-size: 13px;
+			font-weight: normal;
+			margin: 0;
+			padding: 10px 10px;
+			color: #424242;
+			text-decoration: none;
+			/*text-shadow: 水平偏移值 垂直偏移值 对象的阴影模糊值(阴影宽度) 阴影颜色*/
+			text-shadow: 2px 2px 2px #aeaeae;
+		}
+		.accordionMenu :target h2 a,/*目标伪类选择器：url中的片段标识符*/
+		.accordionMenu h2 a:focus,
+		.accordionMenu h2 a:hover,
+		.accordionMenu h2 a:active{
+			background: #2288dd;
+			background: linear-gradient(top, #6bb2ff, #2288dd);
+			background: -webkit-gradient(linear, left top, left bottom, from(#6bb2ff), to(#2288dd));
+			background: -webkit-linear-gradient(top, #6bb2ff, #2288dd);
+			background: -o-linear-gradient(top, #6bb2ff, #2288dd);
+			background: -moz-linear-gradient(top, #6bb2ff, #2288dd);
+			color: #fff;
+		}
+		.accordionMenu p{
+			margin: 0;
+			/*默认高度设置为0，达到隐藏效果*/
+			height: 0;
+			overflow: hidden;
+			padding: 0 10px;
+			/*
+			* transition: 
+			* 	height:	过渡效果的 CSS 属性的名称，当指定属性改变时，过渡效果开始
+			* 	0.5s:	过渡耗时，秒或毫秒
+			* 	ease-in:过渡效果的速度曲线，当前为慢速开始
+			* 	规定过渡效果何时开始
+			*/
+			transition: height 0.5s ease-in;
+			-moz-transition: height 0.5s ease-in;
+			-webkit-transition: height 0.5s ease-in;
+			-o-transition: height 0.5s ease-in;
+		}
+		.accordionMenu :target p{
+			height: 100px;/*改变高度，触发过渡效果*/
+			overflow: auto;
+		}
+		.accordionMenu :target h2:before{
+			/*展开时更改三角下标样式*/
+			border-color: transparent transparent transparent #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="accordionMenu">
+		<div class="menuSection" id="brand">
+			<h2>
+				<a href="#brand">Brand</a>
+				<p>Lorem ipsum dolor ...</p>
+			</h2>
+		</div>
+
+		<div class="menuSection" id="promotion">
+			<h2>
+				<a href="#promotion">Promotion</a>
+				<p>Lorem ipsum dolor sit amet ...</p>
+			</h2>
+		</div>
+
+		<div class="menuSection" id="event">
+			<h2>
+				<a href="#event">Event</a>
+				<p>Lorem ipsum dolor ...</p>
+			</h2>
+		</div>
+	</div>
+</body>
+</html>

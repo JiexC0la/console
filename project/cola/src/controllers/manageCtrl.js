@@ -8,14 +8,14 @@ define(['language'], function(i18n) {
                 active: true,
                 click: function (index) {
                     dealActive(index);
-                    $state.go('manage');
+                    $state.go('manage.photo');
                 }
             }, {
                 name: i18n.main_history,
                 active: false,
                 click: function (index) {
                     dealActive(index);
-                    $state.go('history');
+                    $state.go('manage.history');
                 }
             }];
 
