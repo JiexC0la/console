@@ -1,0 +1,54 @@
+/*头部样式*/
+.head {
+	top: 0;
+	height: 54px;
+	background: #559caa;
+	z-index: 99999;
+	position: fixed;
+	width: 100%;
+}
+.head-music {
+	height: 54px;
+}
+
+/*主体样式*/
+.main {
+	position: relative;
+	height: calc(100% - 50px);
+	min-width: 1200px;
+	min-height: 800px;
+}
+.main-bg {
+	background: url(../imgs/bg-body.jpg) no-repeat;
+	background-size: cover;
+}
+
+/*登录框样式*/
+.login {
+	width: 500px;
+    height: 400px;
+    margin: 300px;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgb(228, 249, 254);
+    background-color: #c4f1f6;
+}
+.login-item {
+	height: 24px;
+	line-height: 24px;
+	padding-left: 30px 
+}
+.login-item-input {
+	width: 200px;
+}
+.login-item-btn {
+	width: 50px;
+}
+/*底部样式*/
+.foot {
+	background: #c4f1f6;
+	bottom: 0;
+	clear: both;
+	z-index: 9999;
+	height: 50px;
+}
