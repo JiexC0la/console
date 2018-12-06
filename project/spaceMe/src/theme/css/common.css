@@ -1,31 +1,31 @@
 /*头部样式*/
 .head {
-	top: 0;
-	height: 54px;
-	background: #559caa;
-	z-index: 99999;
-	position: fixed;
-	width: 100%;
+    top: 0;
+    height: 54px;
+    background: #559caa;
+    z-index: 99999;
+    position: fixed;
+    width: 100%;
 }
 .head-music {
-	height: 54px;
+    height: 54px;
 }
 
 /*主体样式*/
 .main {
-	position: relative;
-	height: calc(100% - 50px);
-	min-width: 1200px;
-	min-height: 800px;
+    position: relative;
+    height: calc(100% - 50px);
+    min-width: 1200px;
+    min-height: 800px;
 }
 .main-bg {
-	background: url(../imgs/bg-body.jpg) no-repeat;
-	background-size: cover;
+    background: url(../imgs/bg-body.jpg) no-repeat;
+    background-size: cover;
 }
 
 /*登录框样式*/
 .login {
-	width: 500px;
+    width: 500px;
     height: 400px;
     margin: 300px;
     display: inline-block;
@@ -34,21 +34,55 @@
     background-color: #c4f1f6;
 }
 .login-item {
-	height: 24px;
-	line-height: 24px;
-	padding-left: 30px 
+    height: 24px;
+    line-height: 24px;
+    padding-left: 30px 
 }
 .login-item-input {
-	width: 200px;
+    width: 200px;
 }
 .login-item-btn {
-	width: 50px;
+    width: 50px;
 }
+.login-item > label {
+    width: 65px;
+    display: inline-block;
+}
+
 /*底部样式*/
 .foot {
-	background: #c4f1f6;
-	bottom: 0;
-	clear: both;
-	z-index: 9999;
-	height: 50px;
+    background: #c4f1f6;
+    bottom: 0;
+    clear: both;
+    z-index: 9999;
+    height: 50px;
+}
+
+/*提示信息*/
+#tipModel {
+    position: fixed;
+    top: 70px;
+    right: 50px;
+    min-width: 300px;
+    max-width: 500px;
+    border: 1px solid;
+    border-radius: 2px;
+    word-break: break-word;
+}
+.tip-err {
+    border-color: red;
+    color: red;
+}
+.tip-succ {
+    border-color: green;
+    color: green;
+}
+#tipInputModel {
+    max-width: 500px;
+    word-break: break-word;
+    border: 1px solid red;
+    border-radius: 2px;
+    color: red;
+    position: absolute;
+    background-color: #fff;
 }
