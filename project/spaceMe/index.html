@@ -44,8 +44,18 @@
                                 class="login-item-input"
                                 id="login_pwd"
                                 placeholder="请输入密码"
-                                oninput="vm.pwdModel.oninput()"
                                 onBlur="vm.pwdModel.blur()">
+                        </div>
+                        <div class="mt20 login-item none">
+                            <label for="pwd">确认密码：</label>
+                            <input
+                                type="password"
+                                name="confirm_pwd"
+                                class="login-item-input"
+                                id="confirm_pwd"
+                                placeholder="请输入确认密码"
+                                oninput="vm.pwdRepeatModel.oninput()"
+                                onBlur="vm.pwdRepeatModel.blur()">
                         </div>
                         <div class="mt20 login-item fz0">
                             <input

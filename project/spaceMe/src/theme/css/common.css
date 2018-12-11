@@ -45,7 +45,7 @@
     width: 50px;
 }
 .login-item > label {
-    width: 65px;
+    width: 80px;
     display: inline-block;
 }
 
@@ -59,7 +59,7 @@
 }
 
 /*提示信息*/
-#tipModel {
+.tip-div {
     position: fixed;
     top: 70px;
     right: 50px;
@@ -73,11 +73,12 @@
     border-color: red;
     color: red;
 }
+/*输入校验提示*/
 .tip-succ {
     border-color: green;
     color: green;
 }
-#tipInputModel {
+.tip-valid {
     max-width: 500px;
     word-break: break-word;
     border: 1px solid red;
@@ -86,3 +87,23 @@
     position: absolute;
     background-color: #fff;
 }
+.tip-valid:before, .tip-valid:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    left: -10px;
+    top: 5px;
+    border-width: 5px;
+    font-size: 0;
+    line-height: 0;
+    border-style: dashed solid dashed dashed;
+    border-color: transparent red transparent transparent;
+}
+.tip-valid:after {
+    border-color: transparent #fff transparent transparent;
+    bottom: 5px;
+    left: -9px;
+}
+

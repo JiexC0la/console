@@ -17,7 +17,17 @@ ajaxService = {
     authLogin: function (params) {
         var config = {
             type: 'post',
-            url: '/v1/login/checkName',
+            url: '/v1/login/auth',
+            data: params
+        };
+        var promise = this.myAjax(config);
+        return promise;
+    },
+    // 注册用户信息
+    userRegister: function (params) {
+        var config = {
+            type: 'post',
+            url: '/v1/login/register',
             data: params
         };
         var promise = this.myAjax(config);

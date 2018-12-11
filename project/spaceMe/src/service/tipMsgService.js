@@ -27,11 +27,12 @@ tipMsgService = {
                 $preDiv.remove();
             } else {
                 // 校验不通过，更改提示信息
-                $preDiv.val(msg);
+                $preDiv.text(msg);
             }
             return;
         }
         var $div = $('<div id="tipInputModel">' + msg + '</div>');
+        $div.addClass('tip-valid tip-valid-left')
         // 当前元素高度
         var h = dom.height();
         // 当前元素宽度
@@ -41,11 +42,10 @@ tipMsgService = {
         // 当前元素上绝对定位
         var aT = dom.offset().top;
         // 计算tip提示的绝对定位
-        var tipLeft = aL + w + 10;
-        var tipTop = aT + (h / 2);
+        var tipLeft = aL + w + 15;
         $div.offset({
             left: tipLeft,
-            top: tipTop
+            top: aT
         });
         // 将提示模块添加到页面
         $div.appendTo('body');
@@ -66,7 +66,7 @@ tipMsgService = {
             _this.tipTimer && clearTimeout(_this.tipTimer);
         }
         // 创建提示模块
-        var $div = $('<div id="tipModel">' + msg + '</div>');
+        var $div = $('<div id="tipModel" class="tip-div">' + msg + '</div>');
         // 添加提示样式
         if (flag) {
             $div.addClass('tip-succ');
