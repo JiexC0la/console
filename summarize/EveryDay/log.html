@@ -1,52 +1,91 @@
-<script>
-/*
-*###请描述一下 cookies，sessionStorage 和 localStorage 的区别？
-*   数据生命周期：
-*       cookie生成时指定maxAge值，默认关闭浏览器失效；
-*       sessionStorage页面会话期可用；
-*       localStorage：除非数据清除，否则一直存在。
-*   存放大小：
-*       cookie为4k左右（每次http请求都会携带cookie）；
-*       sessionStorage和localStorage一般为5M或更大。
-*   服务器通信：
-*       cookie由对服务器的请求来传递，每次都会携带在HTTP头中，如果使用cookie保存过多数据会带来性问题；
-*       sessionStorage和localStorage数据不是由每个服务器请求传递的，不参与和服务器的通信。
-*   易用性：
-*       cookie需要自己封装setCookie，getCookie；
-*       sessionStorage和localStorage可以用源生接口，也可再次封装来对Object和Array有更好的支持。
-*   共同点：
-*       都是保存在浏览器端，和服务器端的session机制不同。       
-*/
+<pre>
+    <h3>请描述一下 cookies，sessionStorage 和 localStorage 的区别？</h3>
+    数据生命周期：
+        cookie生成时指定maxAge值，默认关闭浏览器失效；
+        sessionStorage页面会话期可用；
+        localStorage：除非数据清除，否则一直存在。
+    存放大小：
+        cookie为4k左右（每次http请求都会携带cookie）；
+        sessionStorage和localStorage一般为5M或更大。
+    服务器通信：
+        cookie由对服务器的请求来传递，每次都会携带在HTTP头中，如果使用cookie保存过多数据会带来性问题；
+        sessionStorage和localStorage数据不是由每个服务器请求传递的，不参与和服务器的通信。
+    易用性：
+        cookie需要自己封装setCookie，getCookie；
+        sessionStorage和localStorage可以用源生接口，也可再次封装来对Object和Array有更好的支持。
+    共同点：
+        都是保存在浏览器端，和服务器端的session机制不同。       
 
-/*
-*   cookie的几种常见属性：document.cookie="key=value;expires=失效时间;path=路径;domain=域名;
-*       secure;(secure表安全级别）
-*   cookie 是存储于访问者的计算机中的变量。
-*/	 
-</script>
+    cookie的几种常见属性：document.cookie="key=value;expires=失效时间;path=路径;domain=域名;
+        secure;(secure表安全级别）
+    cookie 是存储于访问者的计算机中的变量。
+</pre>
+<hr>
 
-<script>
-/*
-*####什么是闭包？
-*   闭包就是能够读取其他函数内部变量的函数
-*   闭包可以理解成定义在一个函数内部的函数。
-*   本质上，闭包就是将函数内部和函数外部连接起来的桥梁。
-*
-*   闭包的作用：
-*       读取函数内部变量；
-*       让这些变量的值始终保持在内存中，不会再函数调用后自动清除。
-*
-*   闭包注意点：
-*       闭包会使变量都被保存在内存中，内存消耗大，影响网页性能，在ie中可能导致内存泄漏。
-*           解决办法：退出函数前，将不使用的局部变量删除。
-*       闭包会在父函数外部，改变父函数内部变量的值。
-*/
-</script>
+<pre>
+    <h3>什么是闭包？</h3>
+    闭包就是能够读取其他函数内部变量的函数
+    闭包可以理解成定义在一个函数内部的函数。
+    本质上，闭包就是将函数内部和函数外部连接起来的桥梁。
 
-<script>
-/*
-####当我们打开一个网页，浏览器做了什么？
-	1、生成DOM树
-	2、使用CSS创建CSS对象模型
-*/	
-</script>
+    闭包的作用：
+        读取函数内部变量；
+        让这些变量的值始终保持在内存中，不会再函数调用后自动清除。
+
+    闭包注意点：
+        闭包会使变量都被保存在内存中，内存消耗大，影响网页性能，在ie中可能导致内存泄漏。
+            解决办法：退出函数前，将不使用的局部变量删除。
+        闭包会在父函数外部，改变父函数内部变量的值。
+</pre>
+<hr>
+
+<pre>
+    <h3>当我们打开一个网页，浏览器做了什么？</h3>
+    1、生成DOM树
+    2、使用CSS创建CSS对象模型
+</pre>
+<hr>
+
+<pre>
+    <h3>常见默认端口</h3>
+    HTTP服务器： 80
+    HTTPS服务器： 443
+    Telnet： 23
+    FTP： 21
+</pre>
+<hr>
+
+<pre>
+    <h3>冒泡排序</h3>
+    原理：
+        1、比较相邻的元素，如果第一个比第二个大，就交换他们两个；
+        2、对每一对相邻元素做同样的工作，从开始的第一对到最后一对。在这一点，最后的元素应该会是最大的数；
+        3、针对所有元素重复以上操作，除了最后一个；
+        4、持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。
+        /*
+         * @param
+         *      arr： 需要排序的数组
+         *      num： 第几轮排序
+         * @return   {[type]}   排序后的数组
+         */
+        function bubbleSort(arr, num) {
+            // 默认循环至最后一轮
+            var loopNum = num ? num : arr.length;
+            var i = arr.length;
+            var loop = 0;
+            var temp;
+            while (i > 0 && loop < loopNum) {
+                for (var j = 0; j < i; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+                i--;
+                loop++;
+            }
+            return arr;
+        }
+</pre>
+<hr>
