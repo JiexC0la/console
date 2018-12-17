@@ -31,6 +31,9 @@ tipMsgService = {
             }
             return;
         }
+        if ($preDiv && $preDiv.length < 1 && !msg) {
+            return;
+        }
         var $div = $('<div id="tipInputModel">' + msg + '</div>');
         $div.addClass('tip-valid tip-valid-left')
         // 当前元素高度

@@ -21,6 +21,7 @@ $(document).ready(function() {
             vm.loginPromise.then(function (data) {
                 if (data && data.isValid) {
                     // 认证成功，跳转主页面
+                    window.location.href = './src/html/main/manage.html';
                 } else {
                     tipMsgService.showError('用户名或密码不正确，请重新输入。');
                 }
@@ -123,7 +124,7 @@ $(document).ready(function() {
             tipMsgService.inputTip(msg, $dom);
         },
         blur: function () {
-            vm.pwdModel.value = $('#login_name').val();
+            vm.pwdModel.value = $('#login_pwd').val();
         }
     }
 

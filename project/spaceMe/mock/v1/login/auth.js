@@ -18,7 +18,7 @@ module.exports = function (path, queryParam, postParam) {
 	var pwd = 'happy@123'
 	var flag = false;
 
-	if (queryParam.name === name && queryParam.pwd === pwd) {
+	if (postParam.fields.name === name && postParam.fields.pwd === pwd) {
 		flag = true;
 	}
     return {
