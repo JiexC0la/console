@@ -6,9 +6,17 @@
 </head>
 <body>
     <script type="text/javascript">
-        var arr = [16,25,37,29,11,75,32,1];
-        var result = bubbleSort(arr);
-        console.log(result);
+        var str = '12 123';
+var arr = str.split(' ');
+
+var newArr = arr.sort(function (a, b) {
+    var x = parseInt((a + b), 10);
+    var y = parseInt((b + a), 10);
+    return y - x;
+});
+var newStr = newArr.join('');
+newStr = parseInt(newStr, 10);
+console.log(newStr);
     </script>
 </body>
 </html>

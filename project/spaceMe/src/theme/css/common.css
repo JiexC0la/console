@@ -22,12 +22,29 @@
     background: url(../imgs/bg-body.jpg) no-repeat;
     background-size: cover;
 }
+.main-content {
+    width: 100%;
+    height: calc(100% - 54px);
+    padding-top: 54px;
+}
+.main-l {
+    width: 20%;
+    min-width: 250px;
+    border-right: 1px solid #ccc;
+    height: 100%;
+}
+.main-r {
+    height: 100%;
+    width: calc(80% - 1px)
+    max-width: calc(100% - 251px);
+}
 
 /*登录框样式*/
 .login {
     width: 500px;
     height: 400px;
-    margin: 300px;
+    margin-top: 300px;
+    margin-left: 300px;
     display: inline-block;
     border-radius: 5px;
     box-shadow: 0 8px 16px 0 rgb(228, 249, 254);

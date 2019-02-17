@@ -14,7 +14,7 @@
         cookie需要自己封装setCookie，getCookie；
         sessionStorage和localStorage可以用源生接口，也可再次封装来对Object和Array有更好的支持。
     共同点：
-        都是保存在浏览器端，和服务器端的session机制不同。       
+        都是保存在浏览器端，和服务器端的session机制不同。
 
     cookie的几种常见属性：document.cookie="key=value;expires=失效时间;path=路径;domain=域名;
         secure;(secure表安全级别）
@@ -87,5 +87,31 @@
             }
             return arr;
         }
+</pre>
+
+<pre>
+    <h3>为什么会发生ajax跨域？如何解决？</h3>
+    原因：
+        1：浏览器限制
+        2：跨域（域名或端口不一样）
+        3：xhr请求（只有xhr请求才有跨域问题）
+    解决方法：
+        1、更改浏览器参数，不进行跨域校验。进入浏览器安装目录，执行以下命令：
+            chrome.exe–disable-web-security -user-data-dir=xxx  xxx表示浏览器禁止安全检查的临时存放数据目录
+        2、更改请求类型，不使用xhr对象，例如jsonp
+            jsonp和普通请求的区别：
+                a：请求类型不同，script和xhr
+                b：返回数据类型不同，javaScript和json
+            jsonp实现原理：发送的请求添加一个callback参数，后台通过callback字段识别jsonp请求，将返回数据由json改为javaScript。
+                返回值就是callback函数名，json数据为callback函数内的参数。
+                jsonp是动态创建一个script脚本去请求参数。
+            jsonp的弊端：
+                a：服务器端需要改动适配
+                b：只支持get方法
+                c：不是xhr请求，不支持异步和一些事件
+        3、跨域云（例如A、B域名）：
+            a：被调用方--支持跨域，B返回字段告诉浏览器，允许A进行跨域访问，浏览器通过校验，不报错
+            b：调用方--隐藏跨域，通过代理，把A域名的请求转换成B域名的请求
+
 </pre>
 <hr>
