@@ -2,12 +2,7 @@
 # 新建一个文件 touch .gitignore
 # 添加被git忽略的文件
 
-/project/angularDemo/
-
-/project/vueDemo/
-
-/project/cola/node_modules/
-
-/project/webpackDemo/node_modules
-
-/project/spaceMe/node_modules
+/project/vueDemo/vue-sum/node_modules
+/project/vueDemo/vue-sum/dist
+/project/vueDemo/to-do/node_modules
+/project/vueDemo/to-do/dist

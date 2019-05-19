@@ -1,7 +1,0 @@
-{
-  "devDependencies": {
-    "autoresponse": "^0.3.0",
-    "connect": "^3.6.6",
-    "express": "^4.16.4"
-  }
-}
