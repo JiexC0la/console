@@ -1,0 +1,19 @@
+{
+    "parserOptions": {
+        "parser": "babel-eslint"
+    },
+    "extends": [
+        "eslint:recommended"
+    ],
+    "parser": "vue-eslint-parser",
+    "plugins": [
+        "html"
+    ],
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "rules": {
+        "no-console": "off"
+    }
+}

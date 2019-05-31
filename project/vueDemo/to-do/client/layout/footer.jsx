@@ -1,16 +1,18 @@
 import '../assets/styles/footer.styl'
 
 export default {
-    data() {
+    data () {
         return {
             author: 'JiexC0la'
         }
     },
-    render() {
+    /* eslint-disable */
+    render (h) {
         return (
-            <div id="footer">
+            <div id='footer'>
                 <span>&copy;{this.author}</span>
             </div>
         )
     }
+    /* eslint-enable */
 }

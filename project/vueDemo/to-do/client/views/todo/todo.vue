@@ -19,6 +19,7 @@
             @toggle="toggleFilter"
             @clearAllCompleted="clearAllCompleted"
         ></my-tabs>
+        <router-view></router-view>
     </section>
 </template>
 
@@ -73,7 +74,7 @@ export default {
 <style lang="stylus" scoped>
 .real-app {
     width 600px
-    margin 0 auto 
+    margin 0 auto
     box-shadow 0 0 5px #666
 }
 .add-input {
