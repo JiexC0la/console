@@ -1,5 +1,23 @@
 (function () {
-FeSort = function () {
+
+var FeArr = function () {
+    this.description = '数组函数总结';
+}
+
+/**
+ * 检测是否为数组对象
+ */
+FeArr.prototype.isArr = function (val) {
+    // 支持isArray方法
+    if (Array.isArray(val)) {
+        return true;
+    } else {
+        // 兼容低版本浏览器
+        return Object.prototype.toString.apply(val) === '[object Array]'
+    }
+}
+
+var FeSort = function () {
     this.description = '排序算法总结';
 }
 
@@ -69,15 +87,19 @@ FeSort.prototype.bubbleSort = function (arr, num) {
     }
     return arr;
 }
-FeFrame = function () {
+
+var FeFrame = function () {
     this.version = '1.0.0';
     this.author = 'JiexC0la';
     this.description = '日常函数总结';
 
     // 排序汇总
     this.FeSort = new FeSort();
+    // 数组汇总
+    this.FeArr = new FeArr();
 }
 
 // 初始化将FeFrame挂载到window对象
 window.FeFrame = new FeFrame();
+
 })()

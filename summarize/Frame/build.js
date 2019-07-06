@@ -38,10 +38,11 @@ function buildDist() {
                     let content = fs.readFileSync(filePath);
                     contents += content.toString() + '\n';
                 });
-                // 读取根目录FeFrame.js
+                // 读取根目录index.js
                 let feFrameContent = fs.readFileSync('./index.js');
+                // 将内容包含在匿名函数中，避免污染全局window对象
                 fs.writeFileSync('./dist/FeFrame.js',
-                    '(function () {\n'
+                    '(function () {\n\n'
                     + contents
                     + feFrameContent
                     + '\n})()');

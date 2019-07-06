@@ -1,4 +1,4 @@
-FeSort = function () {
+var FeSort = function () {
     this.description = '排序算法总结';
 }
 

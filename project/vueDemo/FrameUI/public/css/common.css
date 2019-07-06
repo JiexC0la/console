@@ -1,0 +1,66 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top: 0;
+    position: absolute;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 一级标题 */
+.fz-20 {
+    font-size: 20px;
+}
+/* 二级标题 */
+.fz-16 {
+    font-size: 16px;
+}
+/* 默认字体 */
+.fz-14 {
+    font-size: 14px;
+}
+
+/* 定位 */
+.flex {
+    display: flex;
+}
+.ab {
+    position: absolute;
+}
+.rel {
+    position: relative;
+}
+
+/* 浮动 */
+.fl {
+    float: left;
+    display: inline-block;
+}
+.fr {
+    float: right;
+    display: inline-block;
+}
+.tc {
+    text-align: center;
+}
+
+/* 位置 */
+.mt10 {
+    margin-top: 10px;
+}
+.mt20 {
+    margin-top: 20px;
+}
+.ml10 {
+    margin-left: 10px;
+}
+
+.w-100 {
+    width: 100%;
+}
+.h-100 {
+    height: 100%;
+}
