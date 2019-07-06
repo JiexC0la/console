@@ -1,8 +1,6 @@
-/**
- * @author: jiex
- * @version: 1.0
- * @description: a summary of commonly used functions
- */
+FeSort = function () {
+    this.description = '排序算法总结';
+}
 
 /**
  * @DateTime 2018-09-03T20:51:15+0800
@@ -20,7 +18,7 @@
  *              不相等：非转小写相同字母，按照转小写 ASCII码比较
  *      3：循环到最后，都没区别，即a包含b或者b包含a，长度小的排在前面
  */
-function sortArrIn_aToA(arr) {
+FeSort.prototype.sortArrIn_aToA = function (arr) {
     arr.sort(function (a, b) {
         // 循环长度较小的参数
         var temp = a.length < b.length ? a : b;
@@ -51,7 +49,7 @@ function sortArrIn_aToA(arr) {
  *      num： 第几轮排序
  * @return   {[type]}   排序后的数组
  */
-function bubbleSort(arr, num) {
+FeSort.prototype.bubbleSort = function (arr, num) {
     // 默认循环至最后一轮
     var loopNum = num ? num : arr.length;
     var i = arr.length;
@@ -70,4 +68,3 @@ function bubbleSort(arr, num) {
     }
     return arr;
 }
-
