@@ -25,12 +25,9 @@ export default {
     props: {
         styConfig: {
             type: Object,
-            default: {}
-        }
-    },
-    mouted() {
-        if (styConfig && styConfig.top) {
-
+            default: function () {
+                return {}
+            }
         }
     }
 }

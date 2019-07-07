@@ -1,5 +1,5 @@
 // layout
-import FeLayout from './layout/FeLayout'
+import FeLayout from './components/layout/FeLayout'
 
 export default (Vue) => {
     Vue.component('FeLayout', FeLayout);
