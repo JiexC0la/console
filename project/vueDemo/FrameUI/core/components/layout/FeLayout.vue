@@ -1,7 +1,7 @@
 <template>
     <div class="fe-layout">
         <div class="fe-top" :style="{height: styConfig.top ? styConfig.top + 'px' : 60 +'px'}">
-            <slot name="feTop"></slot>
+            <slot name="feTop" class=""></slot>
         </div>
         <div class="fe-middle" :style="{top: styConfig.top ? styConfig.top + 'px' : 60 + 'px', 
             bottom: styConfig.bottom ? styConfig.bottom + 'px' : 60 + 'px'}">

@@ -1,8 +1,8 @@
 <template>
     <div>
         <fe-layout :sty-config="styConfig">
-            <div slot="feTop">
-                this is top
+            <div slot="feTop" class="h-100">
+                <i-header></i-header>
             </div>
             <div slot="feMiddle">
                 <div>middle</div>
@@ -17,6 +17,7 @@
 <script>
 
 import iFooter from './view/iFooter'
+import iHeader from './view/iHeader'
 
 export default {
     name: 'app',
@@ -30,7 +31,8 @@ export default {
         }
     },
     components: {
-        iFooter
+        iFooter,
+        iHeader
     },
     
 }
